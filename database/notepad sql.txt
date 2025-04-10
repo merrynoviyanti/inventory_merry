@@ -1,0 +1,25 @@
+CREATE DATABASE db_inventory_merry
+
+
+~Table barang:
+CREATE TABLE barang (
+    Id_barang int PRIMARY KEY,
+    Nama_barang varchar(50),
+    Id_jenis int,
+    Harga varchar(20),
+    Stok int),
+
+INSERT INTO barang VALUES 
+(101,"kaos",111,"62.000",57), 
+(102,"celana",112,"192.000",71), 
+(103,"kemeja",113,"99.000",88);
+
+~Table jenis:
+CREATE TABLE jenis (
+    Id_jenis int PRIMARY KEY,
+    Nama_jenis varchar(50));
+
+INSERT INTO jenis VALUES 
+(111,"boxy"), 
+(112,"jorts"), 
+(113, "polo");
