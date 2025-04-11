@@ -11,11 +11,11 @@
     <form action="proses_tambah.php" method="post">
       <div class="mb-3">
         <label for="" class="form-label">ID jenis</label>
-        <input type="number" class="form-control" name="id_barang"  id="" placeholder=""/>
+        <input type="number" class="form-control" name="Id_jenis"  id="" placeholder=""/>
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Nama jenis</label>
-        <input type="text" class="form-control" name="nama_barang"  id="" placeholder=""/>
+        <input type="text" class="form-control" name="Nama_jenis"  id="" placeholder=""/>
       </div>
       <button type="submit" class="btn btn-primary">Simpan</button>
       <a href="index.php" class="btn btn-success">Kembali ke index</a>

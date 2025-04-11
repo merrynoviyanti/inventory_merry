@@ -38,30 +38,34 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th cope="row">1</th>
-                <td>111</td>
-                <td>Boxy</td>
-                <td>
-                    <a href="" class="btn btn-warning">Edit</a>
-                </td>
-            </tr>
-            <tr>
-                <th cope="row">2</th>
-                <td>112</td>
-                <td>Jorts</td>
-                <td>
-                    <a href="" class="btn btn-warning">Edit</a>
-                </td>
-            </tr>
-            <tr>
-                <th cope="row">3</th>
-                <td>113</td>
-                <td>Polo</td>
-                <td>
-                    <a href="" class="btn btn-warning">Edit</a>
-                </td>
-            </tr>
+        <?php
+                include "../../config/koneksi.php";
+                $query = mysqli_query($conn, "SELECT * FROM jenis");
+                $no = 1;
+
+                if (mysqli_num_rows($query) > 0) {
+                    while ($result = mysqli_fetch_assoc($query)) {
+                        ?>
+                        <tr>
+                          <td><?php echo $no; ?></td>
+                            <td><?php echo $result['Id_jenis']; ?></td>
+                            <td><?php echo $result['Nama_jenis']; ?></td>
+                          
+                            <td>
+                              <a class = "btn btn-warning" href="view_edit.php?id=<?php echo $result['Id_jenis']?>">
+                             <i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                            <a href="hapus.php?id=<?php echo $result['Id_jenis'] ?>" 
+                            onclick="return confirm('Kamu Yakin?')" 
+                            class="btn btn-danger btn-sm">Hapus</a>
+                            </td>
+                        </tr>
+                        <?php
+                        $no++;
+                    }
+                } else {
+                    echo "<tr><td colspan='7' class='text-center'>Data siswa tidak ditemukan</td></tr>";
+                }
+                ?>
             </tbody>
     </table>
 </div>

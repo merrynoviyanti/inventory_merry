@@ -12,23 +12,23 @@
     <form action="proses_tambah.php" method="post">
       <div class="mb-3">
         <label for="" class="form-label">ID Barang</label>
-        <input type="number" class="form-control" name="id_barang"  id="" placeholder=""/>
+        <input type="number" class="form-control" name="Id_barang"  id="" placeholder=""/>
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Nama Barang</label>
-        <input type="text" class="form-control" name="nama_barang"  id="" placeholder=""/>
+        <input type="text" class="form-control" name="Nama_barang"  id="" placeholder=""/>
       </div>
       <div class="mb-3">
         <label for="" class="form-label">ID jenis</label>
-        <input type="number" class="form-control" name="id_jenis"  id="" placeholder=""/>
+        <input type="number" class="form-control" name="Id_jenis"  id="" placeholder=""/>
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Harga</label>
-        <input type="number" class="form-control" name="harga"  id="" placeholder=""/>
+        <input type="number" class="form-control" name="Harga"  id="" placeholder=""/>
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Stok</label>
-        <input type="number" class="form-control" name="stok"  id="" placeholder=""/>
+        <input type="number" class="form-control" name="Stok"  id="" placeholder=""/>
       </div>
       <button type="submit" class="btn btn-primary">Simpan</button>
       <a href="index.php" class="btn btn-success">Kembali ke index</a>

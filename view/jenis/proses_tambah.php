@@ -1,16 +1,17 @@
-<?php
+<?php 
+$id=$_POST['Id_jenis'];
+$nama_jenis=$_POST ['Nama_jenis'];
+
 include '../../config/koneksi.php';
 
-$id_jenis = $_POST['id_jenis'];
-$nama_jenis = $_POST['nama_jenis'];
+$query = mysqli_query($conn, "INSERT INTO jenis VALUES('$id','$nama_jenis')");
 
-$sql = "INSERT INTO jenis (id_jenis, nama_jenis) VALUES ('$id_jenis', '$nama_jenis')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Data berhasil ditambahkan!";
-    header ("location: index.php");
+//JS
+if ($query) {
+    echo "<script>alert('Data berhasil disimpan');</script>";
+    echo "<script>window.location.href='index.php';</script>;";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "<script>alert('Data gagal disimpan');</script>";
+    echo "<script>window.location.href='view_tambah.php';</script>";
 }
-mysqli_close($conn);
 ?>
